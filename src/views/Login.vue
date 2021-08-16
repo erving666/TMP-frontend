@@ -43,24 +43,20 @@ export default class Login extends Vue {
 
   async logForm(event: any){
 
-
     event.preventDefault();
-
-
-    // if(typeof localStorage)
 
     const logInoStatus: LoginInfo ={ account: this.account, psw: this.psw }
 
-    //this.
 
     await loginstore.Login(logInoStatus).then(data=>{
 
         console.log(loginstore.status);
+        alert('test')
 
         if(loginstore.status=='1'){
 
-            this.$router.push("/health");
-            //alert("logined");
+            this.$router.push("/user/login");
+            alert("logined");
         }
         else{
             alert("登录出错,请确认好账号和密码");
