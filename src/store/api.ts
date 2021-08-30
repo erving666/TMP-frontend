@@ -39,7 +39,7 @@ export function getAxios(auth: any){
 }
 
 export const GdouApi = axios.create({
-    baseURL: "https://gdou.scnu.edu.cn/entity"
+    baseURL: "http//localhost:5000/entity"
 })
 
 export async function getSiteList() {
